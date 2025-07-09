@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #1b3c53;
+  --secondary-color: #d2c1b6;
+  --accent-color: #f2a900;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* header */
+header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+}
+header #course-title {
+  display: block;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav {
+  background-color: var(--text-color);
+  padding: 1rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+header a {
+  color: var(--background-color);
+  font-weight: bold;
+}
+header a:hover {
+  text-decoration: overline;
+  color: var(--accent-color);
+}
+/* main */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+main .card {
+  margin: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+main .card p {
+  padding: 1rem;
+  color: var(--text-color);
+}
+main .card .card-title {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.5rem;
+}
+/* -- */
+main .card .about-me {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+main .card .about-me img {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+/* -- */
+main .card .location {
+  margin-top: 2rem;
+}
+main .card .location h3 {
+  text-align: center;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+main .card .location-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+main .card .location-info img {
+  padding: 1rem 0 0 1rem;
+}
+/* -- */
+main .card .resources {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+main .card .resources h3 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+/* footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+footer #lastModified {
+  color: var(--accent-color);
+  margin-top: 0.4rem;
+}
