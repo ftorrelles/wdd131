@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #1b3c53;
+  --secondary-color: #d2c1b6;
+  --accent-color: #f2a900;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+header {
+  text-align: center;
+}
+header,
+main,
+footer {
+  max-width: 640px;
+  margin: 1px auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+section {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+footer {
+  text-align: center;
+}
+/* media query */
+@media screen and (min-width: 500px) {
+  header {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
