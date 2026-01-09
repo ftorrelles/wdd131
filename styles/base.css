@@ -17,6 +17,9 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
+h1 {
+  text-align: center;
+}
 h1,
 h2,
 h3 {
@@ -62,6 +65,9 @@ header a:hover {
 }
 /* main */
 main {
+  padding-top: 2rem;
+}
+main .principal-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
