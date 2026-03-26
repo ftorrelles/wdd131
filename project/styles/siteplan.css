@@ -1,0 +1,204 @@
+:root {
+  --nex-black: #191a1b; /* Fondo Principal */
+  --nex-dark-grey: #1b1b1c; /* Fondo Secundario/Tarjetas */
+  --nex-grey: #8a8c8b; /* Texto Secundario */
+  --nex-white: #ffffff; /* Texto Principal */
+  --nex-green: #22b561; /* Verde de Marca */
+
+  --heading-font: "Roboto", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--nex-black);
+  color: var(--nex-white);
+  line-height: 1.6;
+  padding: 1rem; /* Padding pequeño para móviles */
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--nex-green);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--nex-green);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  color: var(--nex-grey);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Layout de Tarjetas (Cards) para las secciones */
+.card {
+  background-color: var(--nex-dark-grey);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 5px solid var(--nex-green);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  color: var(--nex-white);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--nex-grey);
+  padding-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.highlight-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--nex-green);
+}
+
+/* Scenarios List */
+.scenarios-list {
+  list-style-position: inside;
+}
+
+.scenarios-list li {
+  margin-bottom: 10px;
+  color: var(--nex-grey);
+  font-style: italic;
+}
+
+/* --- Color Palette Styles --- */
+.color-palette {
+  display: flex;
+  flex-wrap: wrap; /* Permite que bajen si no caben */
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.color-swatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.swatch {
+  width: 100%;
+  height: 60px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.color-info {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.color-code {
+  display: block;
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--nex-green);
+}
+
+.color-name {
+  display: block;
+  color: var(--nex-grey);
+  font-size: 0.75rem;
+}
+
+/* Typography Examples */
+.typography-example {
+  background-color: var(--nex-black);
+  padding: 1rem;
+  border: 1px solid var(--nex-grey);
+  border-radius: 4px;
+}
+
+.typography-example h4 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--nex-green);
+  margin-bottom: 0.5rem;
+}
+
+.small-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+/* Wireframes Styles */
+.wireframes-container {
+  display: flex;
+  flex-direction: column; /* Columna por defecto en móvil */
+  gap: 20px;
+}
+
+.wireframe-box {
+  background-color: var(--nex-black);
+  padding: 10px;
+  border: 1px dashed var(--nex-grey);
+  text-align: center;
+}
+
+.wireframe-box h4 {
+  margin-bottom: 10px;
+  color: var(--nex-grey);
+}
+
+.wireframe-box img {
+  max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+  height: auto;
+  border: 1px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--nex-grey);
+  color: var(--nex-grey);
+  font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE: VISTA ESCRITORIO --- */
+@media (min-width: 768px) {
+  body {
+    max-width: 960px;
+    margin: 0 auto; /* Centrar en pantalla grande */
+    padding: 2rem;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  /* Poner wireframes lado a lado en escritorio */
+  .wireframes-container {
+    flex-direction: row;
+  }
+
+  .wireframe-box {
+    flex: 1; /* Toman el mismo ancho */
+  }
+}
